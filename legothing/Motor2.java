@@ -28,8 +28,8 @@ public class Motor2
         Motor.B.backward();
         Motor.C.backward();
 
-        while (Motor.A.getTachoCount()>0)
-        {
+        while (Motor.B.getTachoCount()>0);
+        while (Motor.C.getTachoCount()>0);
             LCD.drawInt(Motor.B.getTachoCount(),0,2);
             LCD.drawInt(Motor.C.getTachoCount(),0,2);
             Motor.B.stop();
@@ -37,7 +37,7 @@ public class Motor2
             LCD.drawInt(Motor.B.getTachoCount(),0,3);
             LCD.drawInt(Motor.C.getTachoCount(),0,3);
             Button.waitForAnyPress();
-        }
+        
     }
 
 }
